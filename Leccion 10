@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
+public class Aplicacion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int numero;
+		//String valor = new String();
+		String valor = "";
+		Scanner entrada = new Scanner(System.in);
+		while (!"*".equals(valor)){
+			System.out.println("Ingresa un número o \"*\" para salir.");
+			//numero = entrada.nextInt();
+			valor = entrada.nextLine();
+			if (!"*".equals(valor)){
+				numero = Integer.parseInt(valor);
+				if (numero%2==0){
+					System.out.println(valor + " es un número par.");
+				}
+				else{
+					System.out.println(valor + " es un número impar.");
+				}
+			}
+		}
+		System.out.println("Gracias por participar!");
+	}
+
+}
