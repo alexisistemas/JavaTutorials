@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada = new Scanner(System.in);
+		Scanner entrada2 = new Scanner(System.in);
+		String texto = "";
+		int respuesta = 0;
+		int numero1;
+		int numero2;
+		System.out.println("1.SUMA");
+		System.out.println("2.RESTA");
+		System.out.println("3.MULTIPLICACIÓN");
+		System.out.println("4.DIVISION");
+		System.out.println("5.SALIR");
+		System.out.println("Por favor elija el número de la función deseada (1,2,3 o 4). Presione 5 para salir.");
+		texto = entrada.nextLine();			
+		switch (texto){
+			case "1":
+				System.out.println("Introudca el primer número: ");
+				numero1 = entrada.nextInt();
+				System.out.println("Introudca el segundo número: ");
+				numero2 = entrada.nextInt();
+				System.out.println("El resultado de la suma es: " + (numero1+numero2));
+				break;
+			case "2":
+				System.out.println("Introudca el primer número: ");
+				numero1 = entrada.nextInt();
+				System.out.println("Introudca el segundo número: ");
+				numero2 = entrada.nextInt();
+				System.out.println("El resultado de la resta es: " + (numero1-numero2));
+				break;
+			case "3":
+				System.out.println("Introudca el primer número: ");
+				numero1 = entrada.nextInt();
+				System.out.println("Introudca el segundo número: ");
+				numero2 = entrada.nextInt();
+				System.out.println("El resultado de la multiplicación es: " + (numero1*numero2));
+				break;
+			case "4":
+				System.out.println("Introudca el primer número: ");
+				numero1 = entrada.nextInt();
+				System.out.println("Introudca el segundo número: ");
+				numero2 = entrada.nextInt();
+				if (numero2!=0){
+					System.out.println("El resultado de la división es: " + (numero1/numero2));
+				}
+					else{
+						System.out.println("La división entre 0 no está permitida matematicamente.");
+					}
+				break;
+			case "5":
+				System.out.println("Hasta luego!");
+				break;
+			default:
+				System.out.println("Valor no válido. Por favor introduzca un número del 1 al 4.");
+			}
+		}
+}
