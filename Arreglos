@@ -1,0 +1,38 @@
+
+public class Aplicacion {
+	public static void main(String[] args) {
+		String[][] familia = {
+				{" Miembro ","Edad (años)"},
+				{" Yaimery ","37"},
+				{"Alexis D.","32"},
+				{"Jesús D. ","5"},
+				{" Juan P. ","0"}
+		};
+		int sumaedades=0;
+		int miembro_mayor=0;
+		int miembro_menor=500;
+		String nombre_mayor="";
+		String nombre_menor="";
+		for(int fila=0; fila < familia.length; fila++){
+			for(int columna=0; columna < familia[fila].length; columna++){
+				System.out.print(familia[fila][columna] + "\t");
+			}
+			if (fila>0){
+				sumaedades = sumaedades + Integer.parseInt(familia[fila][1]);
+				if (Integer.parseInt(familia[fila][1])>miembro_mayor){
+					miembro_mayor = Integer.parseInt(familia[fila][1]);
+					nombre_mayor = familia[fila][0];
+				}
+				if (Integer.parseInt(familia[fila][1])<miembro_menor){
+					miembro_menor = Integer.parseInt(familia[fila][1]);
+					nombre_menor = familia[fila][0];
+				}
+			}
+			System.out.println();
+		}
+		System.out.println();
+		System.out.println("La edad total de la familia es: " + sumaedades + "." + "\n");
+		System.out.println("El miembro de mayor edad es: " + nombre_mayor + "(" + miembro_mayor + ")." + "\n");
+		System.out.println("El miembro de menor edad es: " + nombre_menor + "(" + miembro_menor + ")." + "\n");
+	}
+}
